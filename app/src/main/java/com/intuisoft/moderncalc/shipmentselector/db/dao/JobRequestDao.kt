@@ -20,7 +20,7 @@ interface JobRequestDao {
     fun updateJob(job: JobRequest)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg jobs: JobRequest)
+    fun insertAll(vararg jobs: JobRequest?)
 
     @Delete
     fun delete(job: JobRequest)

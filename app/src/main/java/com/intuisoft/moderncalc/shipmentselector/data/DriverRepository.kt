@@ -52,6 +52,7 @@ class DriverRepository(
 
     suspend fun getNextJob(firstName: String, lastName: String) : JobRequest? {
         val jobs = appDatabase.jobRequestDao().getAllUnassignedJobs()
+        val al = appDatabase.jobRequestDao().all
         var highestScore = 0f
         var bestMatch: JobRequest? = null
 

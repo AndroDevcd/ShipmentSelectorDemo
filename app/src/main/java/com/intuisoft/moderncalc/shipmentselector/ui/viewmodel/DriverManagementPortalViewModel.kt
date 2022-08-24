@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.intuisoft.moderncalc.shipmentselector.androidwrappers.SingleLiveData
 import com.intuisoft.moderncalc.shipmentselector.data.DriverRepository
 import com.intuisoft.moderncalc.shipmentselector.data.RegionManagerRepository
 import com.intuisoft.moderncalc.shipmentselector.data.model.JobStatus
@@ -27,7 +28,7 @@ class DriverManagementPortalViewModel(
     private val _drivers = MutableLiveData<List<Driver>>()
     val drivers: LiveData<List<Driver>> = _drivers
 
-    private val _jobInfo = MutableLiveData<JobRequest>()
+    private val _jobInfo = SingleLiveData<JobRequest>()
     val jobInfo: LiveData<JobRequest> = _jobInfo
 
     var currentDriver: Driver? = null

@@ -9,7 +9,7 @@ import java.util.*
 
 @Entity
 class JobRequest {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     var uid = 0
 
     @ColumnInfo(name = "location")
