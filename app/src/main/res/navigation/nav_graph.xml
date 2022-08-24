@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/DriverManagementPortalFragment">
+
+    <fragment
+        android:id="@+id/DriverManagementPortalFragment"
+        android:name="com.intuisoft.moderncalc.shipmentselector.ui.managementPortal.DriverManagementPortalFragment"
+        android:label="@string/driver_management_portal_fragment_label"
+        tools:layout="@layout/driver_management_portal_fragment">
+
+        <action
+            android:id="@+id/driverManagementPortalFragment_to_driverInfoFragment"
+            app:destination="@id/DriverInfoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/DriverInfoFragment"
+        android:name="com.intuisoft.moderncalc.shipmentselector.ui.driverInfo.DriverInfoFragment"
+        android:label="@string/driver_info_fragment_label"
+        tools:layout="@layout/driver_info_fragment">
+
+    </fragment>
+</navigation>
